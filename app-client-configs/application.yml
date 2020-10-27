@@ -1,0 +1,35 @@
+server:
+  http2.enabled: true
+  error.include-stacktrace: on_trace_param
+  servlet:
+    encoding.charset: UTF-8
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+    min-response-size: 1024
+
+management:
+  endpoints.web.exposure.include: '*'
+  health:
+    probes.enabled: true
+    binders.enabled: false
+
+spring:
+  main.allow-bean-definition-overriding: true
+
+  cloud:
+    bus:
+      id: ${spring.application.name}-${random.uui}
+      destination: config-server-bus.app
+      env.enabled: true
+      trace.enabled: true
+      refresh.enabled: true
+
+  kafka:
+    client-id: ${spring.application.name}
+    bootstrap-servers:
+      - ${IP_HOST:localhost}:9092
+
+config-global:
+  profile: application
+  msg: config para todos os serviços

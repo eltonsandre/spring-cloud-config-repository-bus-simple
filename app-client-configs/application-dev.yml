@@ -1,0 +1,6 @@
+config-global:
+  profile: application-dev
+  msg: config para todos os serviços  com profile DEV
+
+logging.level:
+  com.github.eltonsandre.sample: DEBUG

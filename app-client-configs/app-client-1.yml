@@ -1,0 +1,5 @@
+config-app:
+  id: ${random.uuid}
+  msg: cliente service Nº 1
+
+
