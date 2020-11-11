@@ -1,7 +1,7 @@
 spring:
   kafka:
     client-id: ${spring.application.name}
-    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS}
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
 
   cloud:
     bus:
@@ -32,8 +32,12 @@ spring:
               timeout: 30
               force-pull: true
               clone-on-start: true
-              pattern: microservice-*
-              searchPaths: microservices-*
+              pattern:
+                - '*'
+                - '*/*'
+              searchPaths:
+                - microservices-*
+                - microservices-*/*
               uri: ${spring.cloud.config.server.git.uri}
               username: ${spring.cloud.config.server.git.username}
               password: ${spring.cloud.config.server.git.password}

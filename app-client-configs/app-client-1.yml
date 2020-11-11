@@ -1,5 +1,7 @@
+#SPRING_PROFILES_ACTIVE=application-default,application-de,default
+
 config-app:
   id: ${random.uuid}
-  msg: Mensagem do cliente service de Nº 1
+  msg: Mensagem do cliente service de Nº 1 ->  ALTERADO 20h09
 
 

@@ -1,0 +1,12 @@
+#SPRING_PROFILES_ACTIVE=default,cloud-karafka
+
+spring:
+  kafka:
+    client-id: ${spring.application.name}
+    bootstrap-servers: ${CLOUDKARAFKA_BROKERS}
+    properties:
+      security.protocol: SASL_SSL
+      sasl.mechanism: SCRAM-SHA-256
+      sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username="${CLOUDKARAFKA_USERNAME}" password="${CLOUDKARAFKA_PASSWORD}";
+
+  cloud.bus.destination: ${CLOUDKARAFKA_TOPIC_PREFIX}config-server-bus.app

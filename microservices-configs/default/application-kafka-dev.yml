@@ -1,0 +1,8 @@
+#SPRING_PROFILES_ACTIVE=default,local
+config-app:
+  profile: application-local
+  kafka: localhost
+
+spring:
+  cloud.bus.destination: config-server-bus.app
+  kafka.bootstrap-servers: localhost:9092

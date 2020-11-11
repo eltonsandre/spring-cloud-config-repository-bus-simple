@@ -1,0 +1,10 @@
+config-app:
+  id: ${random.uuid}
+  msg: cliente service ${spring.application.name}
+
+
+spring:
+  profiles:
+    include:
+      - kafka-cloud
+
