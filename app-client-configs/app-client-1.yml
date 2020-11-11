@@ -1,5 +1,5 @@
 config-app:
   id: ${random.uuid}
-  msg: cliente service Nº 1
+  msg: Mensagem do cliente service de Nº 1
 
 
