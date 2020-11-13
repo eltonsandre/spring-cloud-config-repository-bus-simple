@@ -2,3 +2,4 @@
 
 config-app:
   id: ${random.uuid}
+  name: ${spring.application.name}

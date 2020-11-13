@@ -1,6 +1,7 @@
 #SPRING_PROFILES_ACTIVE=application-default,application-dev,default,dev
 config-app:
   msg: dev-> Mensagem do service ${spring.application.name} ->  ALTERADO 11h35
+  dev: h2
 
 spring:
   profiles:
