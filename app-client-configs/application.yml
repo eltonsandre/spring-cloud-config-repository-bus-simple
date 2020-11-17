@@ -29,7 +29,7 @@ spring:
 
   kafka:
     client-id: ${spring.application.name}
-    bootstrap-servers: ${IP_HOST:localhost-error}:9092
+    bootstrap-servers: localhost:9092
 
 config-global:
   profile: application
