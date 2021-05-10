@@ -7,4 +7,5 @@ spring:
   profiles:
     include:
       - kafka-cloud
+      - messages
 
