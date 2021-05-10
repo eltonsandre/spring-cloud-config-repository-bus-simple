@@ -9,3 +9,6 @@ spring:
       - kafka-cloud
       - messages
 
+  messages:
+    basename: "messages,${spring.application.name}-messages"
+    fallback-to-system-locale: false
