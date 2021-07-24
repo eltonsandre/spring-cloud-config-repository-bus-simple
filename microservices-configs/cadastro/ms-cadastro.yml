@@ -9,5 +9,5 @@ spring:
       - kafka-cloud
 
   messages:
-    basename: ${spring.cloud.config.uri}/${spring.application.name}-messages
+    basename: ${spring.cloud.config.uri}/${spring.application.name}-messages-pt_BR
     fallback-to-system-locale: false
