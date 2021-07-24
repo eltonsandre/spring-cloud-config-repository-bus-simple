@@ -7,8 +7,6 @@ spring:
   profiles:
     include:
       - kafka-cloud
-      - messages
-      - messages-pt_BR
 
   messages:
     basename: "messages,${spring.application.name}-messages"
